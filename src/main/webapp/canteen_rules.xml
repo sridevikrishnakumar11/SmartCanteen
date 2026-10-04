@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smartCanteenSystem>
+    <metadata>
+        <institution>SmartCanteen Campus Food Network</institution>
+        <version>2026.4</version>
+        <governance>Director of Campus Services &amp; Food Safety Authority</governance>
+        <lastUpdated>2026-10-04</lastUpdated>
+    </metadata>
+
+    <!-- CANTEEN OPERATIONAL RULES & POLICIES -->
+    <canteenRules>
+        <ruleSection id="HYGIENE" category="Food Safety &amp; Hygiene Standards">
+            <rule id="R101" priority="MANDATORY">
+                <title>Mandatory Kitchen Headgear and Aprons</title>
+                <description>Mandatory hairnets, gloves, and sanitized aprons in prep zones.</description>
+                <complianceCheck>Daily 8:00 AM shift inspection by Head Chef.</complianceCheck>
+            </rule>
+            <rule id="R102" priority="CRITICAL">
+                <title>Temperature Logging for Perishables</title>
+                <description>Refrigerate perishables at or below 4°C; hold hot food above 65°C.</description>
+                <complianceCheck>Digital probe logs recorded every 2 hours.</complianceCheck>
+            </rule>
+            <rule id="R103" priority="MANDATORY">
+                <title>Clean-As-You-Go Sanitation</title>
+                <description>Thoroughly clean and sanitize fryers and tavas after every rush.</description>
+                <complianceCheck>Verified by Shift Supervisor before afternoon break.</complianceCheck>
+            </rule>
+        </ruleSection>
+
+        <ruleSection id="ORDERS" category="Token &amp; Pickup Regulations">
+            <rule id="R201" priority="HIGH">
+                <title>Break Window Time-Slot Discipline</title>
+                <description>Batch meal prep synchronized to student break time-slots.</description>
+                <complianceCheck>Kitchen Display System (KDS) latency telemetry.</complianceCheck>
+            </rule>
+            <rule id="R202" priority="STANDARD">
+                <title>Digital Token Verification</title>
+                <description>Show digital order token on phone screen before parcel collection.</description>
+                <complianceCheck>Counter barcode and token check before handoff.</complianceCheck>
+            </rule>
+            <rule id="R203" priority="HIGH">
+                <title>Uncollected Food Policy</title>
+                <description>Uncollected food held in insulated warming racks after 35 minutes.</description>
+                <complianceCheck>Automated KDS time elapsed alerts.</complianceCheck>
+            </rule>
+        </ruleSection>
+
+        <ruleSection id="PRICING" category="Subsidized Student Pricing &amp; Billing">
+            <rule id="R301" priority="MANDATORY">
+                <title>Fixed Canteen Price Ceilings</title>
+                <description>Snack prices capped between ₹15 and ₹30 with zero unauthorized hikes.</description>
+                <complianceCheck>Admin quarterly pricing audit.</complianceCheck>
+            </rule>
+            <rule id="R302" priority="CRITICAL">
+                <title>Digital Payment Transparency</title>
+                <description>All payments generate digital receipts for complete audit trails.</description>
+                <complianceCheck>Nightly automated reconciliation report.</complianceCheck>
+            </rule>
+        </ruleSection>
+    </canteenRules>
+
+    <!-- KITCHEN STAFF JOB ALLOCATIONS & DUTIES MATRIX -->
+    <staffJobs>
+        <jobRole id="CHEF_HEAD">
+            <title>Head Kitchen Chef / Shift Lead</title>
+            <assignee>Chef Kumar</assignee>
+            <shift>07:30 AM – 04:30 PM</shift>
+            <workstation>Main Hot Range &amp; KDS Console</workstation>
+            <coreDuties>
+                <duty>Triage incoming orders on live KDS terminal.</duty>
+                <duty>Press "Start Cooking" when meal prep begins.</duty>
+                <duty>Inspect recipe portion weights and culinary seasoning.</duty>
+                <duty>Press "Ready for Pickup" when order is plated.</duty>
+            </coreDuties>
+            <restrictedActions>
+                <restriction>Prohibited from placing food orders or executing customer payments.</restriction>
+            </restrictedActions>
+        </jobRole>
+
+        <jobRole id="STATION_COOK">
+            <title>Station Line Cook &amp; Fryer Operator</title>
+            <assignee>Ramesh (Station 2)</assignee>
+            <shift>08:00 AM – 05:00 PM</shift>
+            <workstation>Tava &amp; Deep-Fryer Bay</workstation>
+            <coreDuties>
+                <duty>Batch fry hot samosas, bajjis, bondas, and puffs.</duty>
+                <duty>Brew fresh filter coffee and masala tea on demand.</duty>
+                <duty>Replenish chutneys and sambar every 30 minutes.</duty>
+            </coreDuties>
+            <restrictedActions>
+                <restriction>Cannot access admin panels or alter menu prices.</restriction>
+            </restrictedActions>
+        </jobRole>
+
+        <jobRole id="COUNTER_EXPEDITOR">
+            <title>Counter Expeditor &amp; Handoff Crew</title>
+            <assignee>Priya &amp; Suresh</assignee>
+            <shift>11:00 AM – 03:00 PM (Peak Break Hours)</shift>
+            <workstation>Express Dispatch Counters #1 and #2</workstation>
+            <coreDuties>
+                <duty>Match customer order tokens with prepared food packages.</duty>
+                <duty>Verify token number on phone screen before handoff.</duty>
+                <duty>Mark order "Collected" on digital counter register.</duty>
+                <duty>Maintain zero congestion at express pickup counters.</duty>
+            </coreDuties>
+            <restrictedActions>
+                <restriction>Cannot alter cooking stages or reassign food prices.</restriction>
+            </restrictedActions>
+        </jobRole>
+    </staffJobs>
+</smartCanteenSystem>
